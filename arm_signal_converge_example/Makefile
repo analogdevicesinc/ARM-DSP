@@ -33,8 +33,6 @@
  # $Revision: 36818 $
  #
  ###############################################################################
- 
- # TODO : This project needs to be linked against a newer version of the CMSIS DSP lib
 
 # This is the name of the build output file
 ifeq "$(PROJECT)" ""

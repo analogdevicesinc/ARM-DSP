@@ -34,7 +34,7 @@
  #
  ###############################################################################
  
- # TODO : This project needs to be linked against a newer version of the CMSIS DSP lib
+# This project is linked against CMSIS 5.7.0
 
 # This is the name of the build output file
 ifeq "$(PROJECT)" ""

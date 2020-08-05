@@ -86,6 +86,7 @@
 
 #include "arm_math.h"
 #include "math_helper.h"
+#include "stdint.h"
 
 #if defined(SEMIHOSTING)
 #include <stdio.h>
