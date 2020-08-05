@@ -1,7 +1,11 @@
 # ARM-DSP
 Porting ARM's DSP examples to Maxim's M4-series LP microcontrollers.
 
-These projects use Maxim's LP Micro toolchain.  Eclipse projects with makefiles are included for each example, and should be built from within Eclipse.  The projects can be built within the repo, provided that the Maxim toolchain is installed and the MAXIM_PATH environment variable is defined.  If the projects are copied to a workspace outside of the repo, the CMSIS directory must be copied to the workspace as well for the Bayes, FFT, and SVM example projects to compile.
+These projects use Maxim's LP Micro toolchain.  Eclipse projects with makefiles are included for each example, and should be built from within Eclipse.  The projects can be built within the repo, provided that the Maxim toolchain is installed and the MAXIM_PATH environment variable is defined.  
+
+If the projects are copied to a workspace outside of the repo, the CMSIS directory must be copied to into the same workspace for the Bayes, FFT, and SVM example projects to compile.
+
+Debug launch configurations are included in each project.
 
 ** The filepath to the project directory must not contain spaces **
 
