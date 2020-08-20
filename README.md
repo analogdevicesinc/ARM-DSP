@@ -12,7 +12,7 @@ The projects in this repo are ports of ARM's DSP example projects that can be fo
 
 Some of the example projects are dependant on a newer version of the CMSIS library than what is included in our toolchain, so pre-compiled binaries are included in this repo and the makefiles for the projects that need it are linked with a path relative to the project. So if the Bayes, FFT, or SVM projects are copied to a workspace outside of the repo, the CMSIS directory must be copied to into the same workspace.
 
-Debug launch configurations are included in each project, and should appear in the "Favorites" menu in Eclipse.
+Debug launch configurations are included in each project, and should appear in the "Favorites" menu in Eclipse.  These projects should be built from within our Eclipse environment as well.
 
 # Notes
 - ** The filepath to the project directory must not contain spaces **
