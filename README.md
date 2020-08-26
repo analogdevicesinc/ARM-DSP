@@ -24,7 +24,7 @@ Debug launch configurations are included in each project, and should appear in t
 </p>
 <img src="img/import.png">
 
-<b>Setup</b>
+# Setup
 <p>
   The example projects come pre-configured for the MAX32660, but if you'd like to target a different microcontroller there are a few small modifications you'll need to make to the makefile within each project.
 </p>
