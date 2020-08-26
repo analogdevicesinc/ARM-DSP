@@ -22,7 +22,7 @@ Debug launch configurations are included in each project, and should appear in t
 <p>
   Clone this repo to a desired location, and then use Eclipse to import the projects into the workspace by browsing to the root directory of the cloned repo.  If you decide to copy the projects into the workspace you'll need to copy the CMSIS folder into the workspace as well.  Otherwise, you can work on from within the repo directly by unchecking the "Copy projects into workspace" checkbox.
 </p>
-[Image of the import screen](/img/import.png)
+![Image of the import screen](/img/import.png)
 
 <b>Setup</b>
 <p>
