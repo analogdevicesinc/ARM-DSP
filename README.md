@@ -1,11 +1,14 @@
 # ARM-DSP
-Porting ARM's DSP examples to Maxim's M4-series LP microcontrollers.
+Porting ARM's DSP examples to Maxim's LP microcontrollers.
 
-Dependencies:
+<b>Required Components</b>
 - Maxim Low-Power ARM Micro Toolchain
   - Windows: https://www.maximintegrated.com/en/design/software-description.html/swpart=SFW0001500A
   - MAC: https://www.maximintegrated.com/en/design/software-description.html/swpart=SFW0001660A
 - CMSIS 5.7.0 (Pre-compiled GCC libs are included in this repo)
+
+<b>Software Download/Install</b>
+Clone this repo to a desired location, and then use Eclipse to import the projects into a workspace as shown below.
 
 # Details
 The projects in this repo are ports of ARM's DSP example projects that can be found in the [CMSIS-DSP library](https://www.keil.com/pack/doc/CMSIS/DSP/html/index.html) that have been made compatible with the build system in Maxim's Low-Power ARM Micro Toolchain.  Some slight modifications have been made to the source code to eliminate compiler errors/warnings, but the examples have been left mostly "as-is".  The major changes here have been made to the build system.
