@@ -1,5 +1,15 @@
 # ARM-DSP
 Porting ARM's DSP examples to Maxim's LP microcontrollers.
+Supported target platforms :
+- MAX32666
+- MAX32660
+- MAX32650
+- MAX32625
+- MAX32620
+- MAX32520
+- MAX3263X
+
+Support for the MAX32600 is under development.
 
 # Introduction
 <p>
