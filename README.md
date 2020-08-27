@@ -1,3 +1,4 @@
+# ** Documentation is currently in progress **
 # ARM-DSP
 Porting ARM's DSP examples to Maxim's LP microcontrollers.
 
