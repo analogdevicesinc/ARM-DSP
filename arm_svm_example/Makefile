@@ -28,19 +28,44 @@
 # trademarks, maskwork rights, or any other form of intellectual
 # property whatsoever. Maxim Integrated Products, Inc. retains all
 # ownership rights.
+#
+# Author : Jake Carter
+# TTS Applications Engineering
+# 8/26/2020
 #################################################################################
- 
-# This project is linked against CMSIS 5.7.0
+# NOTES
+# - This project is linked against CMSIS v5.7.0
+#
+#################################################################################
+# CONFIG
 
 # This is the name of the build output file
 ifeq "$(PROJECT)" ""
-PROJECT=max32660
+PROJECT=arm_svm_example
 endif
 
 # Specify the target processor
 ifeq "$(TARGET)" ""
-TARGET=MAX32660
+TARGET=MAX32665
 endif
+# Valid values :
+# 	MAX32665 (targets MAX32665 - max32668)
+#	MAX32660
+#	MAX32650
+#	MAX32625
+#	MAX32620
+#	MAX32600
+#	MAX32520
+# ** Don't forget to change your debug config to match!  ** (See the readme for help)
+
+
+#FORCE_FP_HW_ACCEL = 1
+# Uncomment the line above to force the use of hardware-accelerated floating-point instructions.  This forces the -mfloat-abi=hard compiler flag.
+# By default, this is disabled and the compiler is allowed to generate floating-point instructions but it uses the soft-float abi.  This allows integer
+# and floating-point code to co-mingle, but sacrifices some performance when they do.  See https://embeddedartistry.com/blog/2017/10/11/demystifying-arm-floating-point-compiler-options/
+# for a great explanation.  ** Currently, this option only has an affect on the MAX32665 target. **
+
+#################################################################################
 
 # Create Target name variables
 TARGET_UC:=$(shell echo $(TARGET) | tr a-z A-Z)
@@ -90,9 +115,24 @@ PROJ_CFLAGS+=-DSEMIHOSTING
 PROJ_CFLAGS+=-D__FPU_PRESENT
 
 # Provide linker flags to link against ARM's math lib
-#PROJ_LDFLAGS += -L$(CMSIS_ROOT)/Lib/GCC
 PROJ_LDFLAGS += -L../CMSIS/5.7.0/Lib/GCC
+# Some of the makefiles for our micros are currently forcing -mfloat-abi=softfp, so for these we need to link against arm_cortex_M4l_math instead of arm_cortexM4lf_math.
+# These micros are losing some performance by not using the hardware accelerated floating point math, but are more easily compatible against other libraries.
+ifeq "$(TARGET)" "MAX32665"
+ifneq "$(FORCE_FP_HW_ACCEL)" ""
 PROJ_LIBS = arm_cortexM4lf_math
+MFLOAT_FLAGS = hard
+export MFLOAT_FLAGS
+else
+PROJ_LIBS = arm_cortexM4l_math
+endif
+
+else ifeq "$(TARGET)" "MAX32660"
+PROJ_LIBS = arm_cortexM4lf_math
+
+else
+PROJ_LIBS = arm_cortexM4l_math
+endif
 
 # Specify the target revision to override default
 # "A2" in ASCII
