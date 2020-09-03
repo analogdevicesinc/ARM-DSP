@@ -1,13 +1,13 @@
 # ARM-DSP
 Porting ARM's DSP examples to Maxim's LP microcontrollers.
 Supported target platforms :
-- MAX32665 (Covers MAX32665 - MAX32668)
-- MAX32660
-- MAX32650
-- MAX32625
-- MAX32620
-- MAX32520
-- MAX3263X
+- MAX32665 (Covers MAX32665 - MAX32668) - Fully tested
+- MAX32660 - Fully tested
+- MAX32650 - Build fully tested, debug to be tested
+- MAX32625 - Build fully tested, debug to be tested
+- MAX32620 - Build fully tested, debug to be tested
+- MAX32520 - Build fully tested, debug to be tested
+- MAX3263X - Build fully tested, debug to be tested
 
 Support for the MAX32600 is under development.
 
