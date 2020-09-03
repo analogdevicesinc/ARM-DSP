@@ -29,9 +29,6 @@
 # property whatsoever. Maxim Integrated Products, Inc. retains all
 # ownership rights.
 #
-# Author : Jake Carter
-# TTS Applications Engineering
-# 8/26/2020
 #################################################################################
 # NOTES
 # - This project is linked against CMSIS v5.7.0

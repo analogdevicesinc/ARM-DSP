@@ -29,8 +29,6 @@
 # property whatsoever. Maxim Integrated Products, Inc. retains all
 # ownership rights.
 #
-# Author : Jake Carter
-# 8/26/2020
 #################################################################################
 # CONFIG
 
