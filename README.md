@@ -62,7 +62,7 @@ These example projects are great starting points for your own projects.  When co
 6. Rename the PROJECT variable in the Makefile to match the project name. 
 <img src="img/copy_example_5.PNG">
 7. Navigate to the debug configuration for the project via Run -> Debug Configurations.
-8. Edit the debug configuration to be associated with the new project, and the newly named .elf file.  Hit "Apply". 
+8. Edit the debug configuration to be associated with the new project, and the newly named build output file.  Hit "Apply". 
 <img src="img/copy_example_6.PNG">
 9. Your new project is now ready to be built & debugged, and is ready for modifications!
 
