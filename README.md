@@ -26,7 +26,7 @@ Debug launch configurations are included in each project, and should appear in t
   - <a href="https://www.maximintegrated.com/en/design/software-description.html/swpart=SFW0001660A">MAC</a>
 
 # Software Download/Install
-1. Install Maxim's ARM LP Microcontroller Toolchain for your OS from one of the above links (If not already installed).  Ensure that all components are checked during installation.  <img src="img/installer_components.png">
+1. Install Maxim's ARM LP Microcontroller Toolchain for your OS from one of the above links (If not already installed).
 2. Clone or download+extract this repo to an accessible location.
 3. Launch the Eclipse CDT IDE and open a workspace.  For help getting started with Eclipse, see the Quick Start guide found in the README.pdf of the toolchain, or Maxim's <a href="https://pdfserv.maximintegrated.com/en/an/TUT6245.pdf">Getting Started with Eclipse</a> User Guide.
 4. Open the Eclipse Import wizard with File -> Import...
