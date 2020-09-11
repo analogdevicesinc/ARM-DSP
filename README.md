@@ -21,7 +21,7 @@ Debug launch configurations are included in each project, and should appear in t
 
 
 # Required Components
-- Maxim Low-Power ARM Micro Toolchain
+- Maxim ARM Cortex Toolchain
   - <a href="https://www.maximintegrated.com/en/design/software-description.html/swpart=SFW0001500A">Windows</a>
   - <a href="https://www.maximintegrated.com/en/design/software-description.html/swpart=SFW0001660A">MAC</a>
 
