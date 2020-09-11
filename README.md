@@ -12,37 +12,37 @@ Supported target platforms :
 Support for the MAX32600 is under development.
 
 # Introduction
-<p>
-  The projects in this repo are ports of ARM's DSP example projects that can be found in the <a href="https://www.keil.com/pack/doc/CMSIS/DSP/html/index.html" >CMSIS-DSP library</a> that have been made compatible with the build system in Maxim's Low-Power ARM Micro Toolchain.  Some slight modifications have been made to the source code to eliminate compiler errors/warnings, but the examples have been left mostly "as-is".  The major changes here have been made to the build system.
-</p>
-<p>
-  Some of the example projects are dependant on a newer version of the CMSIS library than what is included in our toolchain, so pre-compiled binaries are included in this repo and the makefiles for the projects that need it are linked with a path relative to the project. So if the Bayes, FFT, or SVM projects are copied to a workspace outside of the repo, the CMSIS directory must be copied to into the same workspace.
-</p>
-<p>
-Debug launch configurations are included in each project, and should appear in the "Favorites" menu in Eclipse.  These projects should be built from within our Eclipse environment as well.
-</p>
+
+The projects in this repo are ports of ARM's DSP example projects that can be found in the <a href="https://www.keil.com/pack/doc/CMSIS/DSP/html/index.html" >CMSIS-DSP library</a> that have been made compatible with the build system in Maxim's Low-Power ARM Micro Toolchain.  Some slight modifications have been made to the source code to eliminate compiler errors/warnings, but the examples have been left mostly "as-is".  The major changes here have been made to the build system.
+
+Some of the example projects are dependant on a newer version of the CMSIS library than what is included in our toolchain, so pre-compiled binaries are included in this repo and the makefiles for the projects that need it are linked with a path relative to the project. So if the Bayes, FFT, or SVM projects are copied to a workspace outside of the repo, the CMSIS directory must be copied to into the same workspace.
+
+Debug launch configurations are included in each project, and should appear in the "Favorites" menu in Eclipse.
+
 
 # Required Components
 - Maxim Low-Power ARM Micro Toolchain
-  - Windows: https://www.maximintegrated.com/en/design/software-description.html/swpart=SFW0001500A
-  - MAC: https://www.maximintegrated.com/en/design/software-description.html/swpart=SFW0001660A
-- CMSIS 5.7.0 (Pre-compiled GCC libs are included in this repo)
+  - <a href="https://www.maximintegrated.com/en/design/software-description.html/swpart=SFW0001500A">Windows</a>
+  - <a href="https://www.maximintegrated.com/en/design/software-description.html/swpart=SFW0001660A">MAC</a>
 
 # Software Download/Install
-<p>
-  Clone or download this repo to an accessible location, and then use Eclipse to import the projects into the workspace by browsing to the root directory of the repo.  If you decide to copy the projects into the workspace you'll need to copy the CMSIS folder into the workspace as well.  Otherwise, you can work on from within the repo directly by unchecking the "Copy projects into workspace" checkbox.
-</p>
-<img src="img/import.png">
+1. Install Maxim's ARM LP Microcontroller Toolchain for your OS from one of the above links (If not already installed).  Ensure that all components are checked during installation.  <img src="img/installer_components.png">
+2. Clone or download+extract this repo to an accessible location.
+3. Launch the Eclipse CDT IDE and open a workspace.  For help getting started with Eclipse, see the Quick Start guide found in the README.pdf of the toolchain, or Maxim's <a href="https://pdfserv.maximintegrated.com/en/an/TUT6245.pdf">Getting Started with Eclipse</a> User Guide.
+4. Open the Eclipse Import wizard with File -> Import...
+5. Under General, select the "Existing Projects into Workspace" option.  Hit Next.  <img src="img/import_general.png">
+6. Browse to root directory of the repo from step 2.  Select the projects you'd like to import into the workspace.  If the "Copy projects into workspace" option is checked, the "CMSIS" project must be selected, which is simply a folder that holds the CMSIS-DSP library that these projects link against.  Hit Finish. <img src="img/import.png">
+7. You should now see the projects imported into your Eclipse workspace.  These are ready to build, debug, and copy.  <img src="eclipse_projects_imported.PNG">
+8. See the Setup section below for information on configuring these projects further.
 
 # Setup
-<p>
-  The example projects come pre-configured for the MAX32660, but if you'd like to target a different microcontroller there are just two modifications that will need to be made.
-  <ol>
-    <li>Change the target processor in the makefile of the project, as shown below.  For example, if targeting the MAX32660, change to TARGET=MAX32660.  The makefile will handle the rest.<img src="img/target.png"></li>
-    <li>Change the debug configuration to use the correct .cfg file for the target processor, as shown below.  Navigate to Run -> Debug Configurations and then to the correct GDB OpenOCD Debugging configuration for the project.  Navigate to the "Debugger" tab, and see the "Config options:" box.  Change the portion shown in red below to match your the target processor in the makefile.  For example, to target the MAX32660 modify config options to use -f target/max32660.cfg<img src="img/debug_config.png"</li>
-  </ol>
-</p>
+## Changing the Target Microcontroller
+These example projects come pre-configured for the MAX32665 target (which covers the MAX32665-MAX32668), but if you'd like to target a different microcontroller there are just two modifications that you will need to make.
 
+1. Change the target processor in the makefile of the project, as shown below.  For example, if targeting the MAX32660, change to TARGET=MAX32660.  The makefile will handle the rest. <img src="img/target.png">
+2. Change the debug configuration to use the correct .cfg file for your target, as shown below.  Navigate to Run -> Debug Configurations and then to the correct GDB OpenOCD Debugging configuration for the project.  Navigate to the "Debugger" tab, and see the "Config options:" box.  Change the portion shown in red below to match your the target processor in the makefile.  For example, to target the MAX32660 modify config options to use -f target/max32660.cfg<img src="img/debug_config.png">
+
+## Copying an Example to a New Project
 # Notes
 - ** The filepath to the project directory must not contain spaces **
 - All of the example projects retain support for Maxim's peripheral drivers and compile all of the drivers by default on first build.  This can be disabled in the makefile to reduce build time if the peripheral drivers aren't going to be used.
