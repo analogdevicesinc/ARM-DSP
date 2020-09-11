@@ -34,7 +34,7 @@ Debug launch configurations are included in each project, and should appear in t
 6. Browse to root directory of the repo from step 2.  Select the projects you'd like to import into the workspace.  **If the "Copy projects into workspace" option is checked, the "CMSIS" project must be selected too**. The CMSIS "project" is simply a folder that holds the CMSIS-DSP library that these projects link against.  Hit Finish. 
 <img src="img/import.png">
 7. You should now see the projects imported into your Eclipse workspace.  These are ready to build, debug, and copy.  
-<img src="eclipse_projects_imported.PNG">
+<img src="img/eclipse_projects_imported.PNG">
 8. See the Setup section below for information on configuring these projects further.
 
 # Setup
