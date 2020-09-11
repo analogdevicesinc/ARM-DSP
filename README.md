@@ -43,6 +43,19 @@ These example projects come pre-configured for the MAX32665 target (which covers
 2. Change the debug configuration to use the correct .cfg file for your target, as shown below.  Navigate to Run -> Debug Configurations and then to the correct GDB OpenOCD Debugging configuration for the project.  Navigate to the "Debugger" tab, and see the "Config options:" box.  Change the portion shown in red below to match your the target processor in the makefile.  For example, to target the MAX32660 modify config options to use -f target/max32660.cfg<img src="img/debug_config.png">
 
 ## Copying an Example to a New Project
+These example projects are great starting points for your own projects.  When copying a project to a new one, there are a few modifications to the copied project that you'll need to make, shown with an example below.  For this example, I've copied the "arm_bayes_example" to a new project called "my_bayes_project".
+
+<img src="copy_example_1">
+1. Right click -> Copy on the example project.
+2. Right click on the workspace -> Paste. Rename the project to something new.<img src="copy_example_2">
+3. Right click on the new project, and select Properties.
+4. Navigate to the "C/C++ Build tab", and then the "Refresh Policy" sub-tab.  Change the entry to match the new project folder.  This ensures that the Project Explorer updates automatically when changes are made. <img src="copy_example_3">
+5. Rename the debug configuration file for the project to match the project name. <img src="copy_example_4">
+6. Rename the PROJECT variable in the Makefile to match the project name. <img src="copy_example_5">
+7. Navigate to the debug configuration for the project via Run -> Debug Configurations.
+8. Edit the debug configuration to be associated with the new project, and the newly named .elf file.  Hit "Apply". <img src="copy_example_6">
+9. Your new project is now ready to be built & debugged, and is ready for modifications!
+
 # Notes
 - ** The filepath to the project directory must not contain spaces **
 - All of the example projects retain support for Maxim's peripheral drivers and compile all of the drivers by default on first build.  This can be disabled in the makefile to reduce build time if the peripheral drivers aren't going to be used.
