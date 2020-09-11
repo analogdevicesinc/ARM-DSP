@@ -39,7 +39,7 @@ Debug launch configurations are included in each project, and should appear in t
 ## Changing the Target Microcontroller
 These example projects come pre-configured for the MAX32665 target (which covers the MAX32665-MAX32668), but if you'd like to target a different microcontroller there are just two modifications that you will need to make.
 
-1. Change the target processor in the makefile of the project, as shown below.  For example, if targeting the MAX32660, change to TARGET=MAX32660.  The makefile will handle the rest. <img src="img/target.png">
+1. Change the target processor for the makefile of the project, as shown below.  For example, if targeting the MAX32660, change to TARGET=MAX32660.  The makefile will handle the rest. <img src="img/target.png">
 2. Change the debug configuration to use the correct .cfg file for your target, as shown below.  Navigate to Run -> Debug Configurations and then to the correct GDB OpenOCD Debugging configuration for the project.  Navigate to the "Debugger" tab, and see the "Config options:" box.  Change the portion shown in red below to match your the target processor in the makefile.  For example, to target the MAX32660 modify config options to use -f target/max32660.cfg<img src="img/debug_config.png">
 
 ## Copying an Example to a New Project
