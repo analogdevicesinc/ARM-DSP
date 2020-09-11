@@ -46,8 +46,8 @@ These example projects come pre-configured for the MAX32665 target (which covers
 These example projects are great starting points for your own projects.  When copying a project to a new one, there are a few modifications to the copied project that you'll need to make, shown with an example below.  For this example, I've copied the "arm_bayes_example" to a new project called "my_bayes_project".
 
 
-1. Right click -> Copy on the example project.
-2. Right click on the workspace -> Paste. Rename the project to something new.<img src="img/copy_example_1.PNG"> <img src="img/copy_example_2.PNG">
+1. Right click -> Copy on the example project. <img src="img/copy_example_1.PNG">
+2. Right click on the workspace -> Paste. Rename the project to something new. <img src="img/copy_example_2.PNG">
 3. Right click on the new project, and select Properties.
 4. Navigate to the "C/C++ Build tab", and then the "Refresh Policy" sub-tab.  Change the entry to match the new project folder.  This ensures that the Project Explorer updates automatically when changes are made. <img src="img/copy_example_3.PNG">
 5. Rename the debug configuration file for the project to match the project name. <img src="img/copy_example_4.PNG">
