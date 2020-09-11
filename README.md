@@ -45,15 +45,15 @@ These example projects come pre-configured for the MAX32665 target (which covers
 ## Copying an Example to a New Project
 These example projects are great starting points for your own projects.  When copying a project to a new one, there are a few modifications to the copied project that you'll need to make, shown with an example below.  For this example, I've copied the "arm_bayes_example" to a new project called "my_bayes_project".
 
-<img src="copy_example_1">
+<img src="copy_example_1.png">
 1. Right click -> Copy on the example project.
-2. Right click on the workspace -> Paste. Rename the project to something new.<img src="copy_example_2">
+2. Right click on the workspace -> Paste. Rename the project to something new.<img src="copy_example_2.png">
 3. Right click on the new project, and select Properties.
-4. Navigate to the "C/C++ Build tab", and then the "Refresh Policy" sub-tab.  Change the entry to match the new project folder.  This ensures that the Project Explorer updates automatically when changes are made. <img src="copy_example_3">
-5. Rename the debug configuration file for the project to match the project name. <img src="copy_example_4">
-6. Rename the PROJECT variable in the Makefile to match the project name. <img src="copy_example_5">
+4. Navigate to the "C/C++ Build tab", and then the "Refresh Policy" sub-tab.  Change the entry to match the new project folder.  This ensures that the Project Explorer updates automatically when changes are made. <img src="copy_example_3.png">
+5. Rename the debug configuration file for the project to match the project name. <img src="copy_example_4.png">
+6. Rename the PROJECT variable in the Makefile to match the project name. <img src="copy_example_5.png">
 7. Navigate to the debug configuration for the project via Run -> Debug Configurations.
-8. Edit the debug configuration to be associated with the new project, and the newly named .elf file.  Hit "Apply". <img src="copy_example_6">
+8. Edit the debug configuration to be associated with the new project, and the newly named .elf file.  Hit "Apply". <img src="copy_example_6.png">
 9. Your new project is now ready to be built & debugged, and is ready for modifications!
 
 # Notes
