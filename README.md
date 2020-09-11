@@ -28,10 +28,10 @@ Debug launch configurations are included in each project, and should appear in t
 # Software Download/Install
 1. Install Maxim's ARM LP Microcontroller Toolchain for your OS from one of the above links (If not already installed).
 2. Clone or download+extract this repo to an accessible location.
-3. Launch the Eclipse CDT IDE and open a workspace.  For help getting started with Eclipse, see the Quick Start guide found in the README.pdf of the toolchain, or Maxim's <a href="https://pdfserv.maximintegrated.com/en/an/TUT6245.pdf">Getting Started with Eclipse</a> User Guide.
+3. Launch the Eclipse CDT IDE and open a workspace.  (For help getting started with Eclipse, see the Quick Start guide found in the README.pdf of the toolchain, or Maxim's <a href="https://pdfserv.maximintegrated.com/en/an/TUT6245.pdf">Getting Started with Eclipse</a> User Guide.)
 4. Open the Eclipse Import wizard with File -> Import...
 5. Under General, select the "Existing Projects into Workspace" option.  Hit Next.  <img src="img/import_general.png">
-6. Browse to root directory of the repo from step 2.  Select the projects you'd like to import into the workspace.  If the "Copy projects into workspace" option is checked, the "CMSIS" project must be selected, which is simply a folder that holds the CMSIS-DSP library that these projects link against.  Hit Finish. <img src="img/import.png">
+6. Browse to root directory of the repo from step 2.  Select the projects you'd like to import into the workspace.  **If the "Copy projects into workspace" option is checked, the "CMSIS" project must be selected too**. The CMSIS "project" is simply a folder that holds the CMSIS-DSP library that these projects link against.  Hit Finish. <img src="img/import.png">
 7. You should now see the projects imported into your Eclipse workspace.  These are ready to build, debug, and copy.  <img src="eclipse_projects_imported.PNG">
 8. See the Setup section below for information on configuring these projects further.
 
