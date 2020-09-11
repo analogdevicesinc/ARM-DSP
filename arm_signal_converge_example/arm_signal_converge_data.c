@@ -1,13 +1,3 @@
-/* ----------------------------------------------------------------------
-* Copyright (C) 2020-2021 Maxim Integrated Products, Inc., All Rights Reserved.
-*
-* NOTICE OF MODIFICATIONS
-*
-* The following modifications have been made to the original source files provided by ARM Limited :
-* 	- main function return paths
-*	- main function return type
-* ---------------------------------------------------------------------- */
-
 /* ----------------------------------------------------------------------   
 * Copyright (C) 2010-2012 ARM Limited. All rights reserved.   
 *   
