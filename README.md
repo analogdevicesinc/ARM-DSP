@@ -69,3 +69,4 @@ These example projects are great starting points for your own projects.  When co
 # Notes
 - ** The filepath to the project directory must not contain spaces **
 - All of the example projects retain support for Maxim's peripheral drivers and compile all of the drivers by default on first build.  This can be disabled in the makefile to reduce build time if the peripheral drivers aren't going to be used.
+
